@@ -42,17 +42,18 @@ def sendEmail(Sender_data, receiver_email, name, msg):
 # creating a object
 
     # # Send an image as attachment
-    with open("D:\python\SE\version 1\download.jpeg", "rb") as f:
-        # image_data = f.read()
-        image_type = puremagic.what('.jpeg')
-        # image_name = f.name
-        print(puremagic.magic_stream(f))
+    with open('birthday.jpg', "rb") as f:
+        image_data = f.read()
+        image_type = 'jpeg'
+        image_name = f.name
+    mail.add_attachment(image_data, maintype = 'image', subtype = image_type, filename = image_name)
 
 
-    mail.add_attachment(image_type)
+  
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
         # Login to SMTP server
+
         server.login(sender_email, sender_password)
 
         # Sending email using send_message method by passing EmailMessage object
@@ -69,7 +70,7 @@ def sendEmail(Sender_data, receiver_email, name, msg):
 if __name__ == "__main__":
     # read the excel sheet having all the details
     dataframe = pandas.read_excel(
-       "version 1\excelsheet.xlsx")
+       "excelsheet.xlsx")
 
     # today's date
     today = datetime.datetime.now().strftime("%d-%m")
