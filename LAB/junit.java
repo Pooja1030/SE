@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Mail_OTP {
+public class junit {
     static int num_of_characters = 3;
     static int num_of_numbers = 3;
     static int length;
