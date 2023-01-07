@@ -1,4 +1,3 @@
-
 import javax.imageio.spi.IIORegistry;
 import java.net.PasswordAuthentication;
 import java.util.Objects;
@@ -7,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class otp{
+public class Mail_OTP {
     static int num_of_characters = 3;
     static int num_of_numbers = 3;
     static int length;
